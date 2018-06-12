@@ -6,8 +6,7 @@
 
 .hero
     grid-area: hero
-    min-height: 400px
-    background: #cccccc url(../images/hero/hero-img.jpg)
+    min-height: 100vh
     background: #cccccc url(../images/hero/hero-img.jpg)
     background-size: cover
     background-position: bottom right
@@ -18,11 +17,13 @@
     align-items: start
     justify-content: center
     > *
-        background: yellow
+        color: #ffffff
         padding: 5px
 
 .hero__title
     grid-area: title
+    text-align: center
+    text-transform: uppercase
     // &__img
     //     grid-area: hero
     //     min-height: 403px
@@ -33,28 +34,28 @@
         
             
     
-// .contacts
-//     display: flex
-//     justify-content: flex-end
-//     align-items: center
+.contacts
+    display: flex
+    justify-content: flex-end
+    align-items: center
 
-// .contact
-//     display: inline-block
-//     vertical-align: top
-//     padding: 10px 10px 8px
-//     color: #424242
-//     transition: 0.3s
-//     text-decoration: none
-//     &:hover
-//         color: lighten(#424242, 20%)
-//     &:first-child
-//         margin-right: 8px
-//         padding-right: 18px
-//         border-right: 1px solid #e2e2e2
-//     &__icon
-//         margin-right: 7px
-//         &--email
-//             font-size: 1.2rem
+.contact
+    display: inline-block
+    vertical-align: top
+    padding: 10px 10px 8px
+    color: #424242
+    transition: 0.3s
+    text-decoration: none
+    &:hover
+        color: lighten(#424242, 20%)
+    &:first-child
+        margin-right: 8px
+        padding-right: 18px
+        border-right: 1px solid #e2e2e2
+    &__icon
+        margin-right: 7px
+        &--email
+            font-size: 1.2rem
 
 .facebook-icon
     display: inline-block
