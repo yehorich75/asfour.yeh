@@ -3,7 +3,7 @@ const browserSync = require('browser-sync').create();
 const pug = require('gulp-pug');
 const sass = require('gulp-sass');
 const postcss = require('gulp-postcss');
-const sourcemaps = require('gulp-sourcemaps');
+// const sourcemaps = require('gulp-sourcemaps');
 const autoprefixer = require('autoprefixer');
 const spritesmith = require('gulp.spritesmith');
 const rimraf = require('rimraf');
@@ -36,9 +36,9 @@ gulp.task('templates:compile', function buildHTML() {
 /* ------------ Styles compile ------------- */
 gulp.task('styles:compile', function () {
   return gulp.src('source/styles/main.sass')
-    .pipe(sourcemaps.init())
+    // .pipe(sourcemaps.init())
     .pipe(postcss([autoprefixer('last 3 versions')]))
-    .pipe(sourcemaps.write())
+    // .pipe(sourcemaps.write())
     .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
     .pipe(rename('main.min.css'))
     .pipe(gulp.dest('build/css'));
