@@ -1,8 +1,10 @@
 section.product
-    margin: 100px 0
+    padding: 80px 0
     text-align: center
     text-transform: uppercase
     background: #ebebeb
+    h2 
+        margin: 0 0 65px
 
 .product__items
     display: flex
@@ -12,19 +14,21 @@ section.product
         display: flex
         justify-content: center
         align-items: center
-        background: #ffffff
-        margin: 10px
-        text-decoration: none
-        max-height: 300px
-        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)
+        &--link
+            text-decoration: none
+            position: relative
         &--title
-            // padding: 0 120px 
-            h5
-                font-weight: 600
-                letter-spacing: 1px
-                color: #42A5F5
+            font-weight: 600
+            letter-spacing: 1px
+            color: $blue-color
+            position: absolute
+            top: 70%
+            background: #ffffff
+            padding: 10px 15px
         img
             max-width: 100%
-            max-height: 300px
+            max-height: 300px    
+            
+        
 
 
