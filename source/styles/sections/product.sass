@@ -2,17 +2,29 @@ section.product
     margin: 100px 0
     text-align: center
     text-transform: uppercase
+    background: #ebebeb
 
 .product__items
     display: flex
     flex-wrap: wrap
-    a.product__item
+    .product__item
         width: calc(33.33% - 20px)
+        display: flex
+        justify-content: center
+        align-items: center
+        background: #ffffff
         margin: 10px
         text-decoration: none
+        max-height: 300px
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23)
+        &--title
+            // padding: 0 120px 
+            h5
+                font-weight: 600
+                letter-spacing: 1px
+                color: #42A5F5
         img
             max-width: 100%
-        h5
-            font-weight: 600
-            letter-spacing: 1px
-            color: #42A5F5
+            max-height: 300px
+
+
