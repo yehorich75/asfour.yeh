@@ -2,17 +2,23 @@
     .top
         .hero__title
             .contacts
-                .contacts__address Украина,г.Киев, пр-т Краснозвездный, 126г
-                .contact__phone  +38 044 5859920 Факс +38 044 5225814 Моб 063 7192773
-                a.contact__mail(href="mailto:asfour@asfour.com.ua") asfour@asfour.com.ua
+                .contacts__address.contacts__item
+                    i.fas.fa-map-marker-alt Украина,г.Киев, пр-т Краснозвездный, 126г
+                .contacts__phones.contacts__item
+                    .contacts__phones--phone
+                        i.fas.fa-phone 044 585 99 20 
+                    .contacts__phones--fax
+                        i.fas.fa-fax 044 522 58 14
+                    .contacts__phones--mobile
+                        i.fas.fa-mobile-alt 063 719 27 73
+                    
+                a.contacts__mail.contacts__item(href="mailto:asfour@asfour.com.ua") asfour@asfour.com.ua
             nav.nav
                 a.nav__link.nav__link--active(href="#") Главная
                 a.nav__link(href="#") Продукция
                 a.nav__link.logo: img.logo__picture(src="images/asfour-logo.svg")
                 a.nav__link(href="#") Сертификаты
                 a.nav__link(href="#") Контакты
-            h1 Asfour Crystal
-            p Ukraine
         header.hero
 
                         
