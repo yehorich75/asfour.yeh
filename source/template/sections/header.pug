@@ -1,37 +1,38 @@
-.wrapper
-    header.top
-        .hero__title
-            a.logo: img.logo__picture(src="images/asfour-logo.svg")
-            nav.nav
-                a.nav__link.nav__link--active(href="#") Главная
-                a.nav__link(href="#") Продукция
-                a.nav__link(href="#") Сертификаты
-                a.nav__link(href="#") Контакты
+header.top
+    .hero__title
+        a.logo: img.logo__picture(src="../images/asfour-logo.svg")
+        nav.nav
+            a.nav__link.nav__link--active(href="#") Главная
+            a.nav__link(href="#") Продукция
+            a.nav__link(href="#") Сертификаты
+            a.nav__link(href="#") Контакты
 
-            .contacts
-                .contacts__item.contacts__address
-                    i.fas.fa-map-marker-alt
-                    span Украина,&nbsp г.Киев,&nbspпр-т Краснозвездный,&nbsp126г
+        .contacts
+            .contacts__item.contacts__address
+                i.fas.fa-map-marker-alt
+                span Украина,&nbsp г.Киев,&nbspпр-т Краснозвездный,&nbsp126г
 
-                .contacts__item
-                    .contacts__phones.contacts__phones--phone
-                        i.fas.fa-phone
-                        span 044 5859920 
-                    .contacts__phones.contacts__phones--fax
-                        i.fas.fa-fax
-                        span 044 5225814
-                    .contacts__phones.contacts__phones--mobile
-                        i.fas.fa-mobile-alt
-                        span 063 7192773
-                    
-                .contacts__item.contacts__mail--item
-                    a(href="mailto:asfour@asfour.com.ua")
-                        i.far.fa-envelope
-                        span  asfour@asfour.com.ua
-            
-        .hero
+            .contacts__item
+                .contacts__phones.contacts__phones--phone
+                    i.fas.fa-phone
+                    span 044 5859920
+                .contacts__phones.contacts__phones--fax
+                    i.fas.fa-fax
+                    span 044 5225814
+                .contacts__phones.contacts__phones--mobile
+                    i.fas.fa-mobile-alt
+                    span 063 7192773
 
-                        
-        //- .header__bottom
-        //-     .container
+            .contacts__item.contacts__mail--item
+                a(href="mailto:asfour@asfour.com.ua")
+                    i.far.fa-envelope
+                    span  asfour@asfour.com.ua
+
+    .hero
+        .hero__video
+            img.hero__video--image(src="../images/hero/hero-img.jpg" width="890" height="403")
+            .hero__video--caption
+                a.hero__video--button(href="https://youtu.be/NFNoRPJAuw8" data-source="https://youtu.be/NFNoRPJAuw8")
+                h4.hero__video--title Видео презентация
+
 

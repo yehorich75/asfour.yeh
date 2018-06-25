@@ -9,8 +9,10 @@ html(lang='ru')
         link(rel="stylesheet" href="css/main.min.css")
         title Business
     body
-        include sections/header.pug
-        include sections/product.pug
+        .wrapper
+            include sections/header.pug
+            include sections/product.pug
+            include sections/certificate.pug
         include sections/footer.pug
         //- include sections/hero.pug
         //- include sections/about.pug
