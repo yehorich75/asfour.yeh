@@ -1,15 +1,17 @@
 .top
     display: grid
-    grid-template-columns: 50% 1fr
+    grid-template-columns: 1fr 1fr
     grid-template-rows: 100vh
     align-items: flex-start
     justify-items: center
+    overflow: hidden
     .contacts__phones
         display: inline-block
         margin: 0 0 0 50px
 
 .hero
     overflow: hidden
+    width: 50vw
     &__video
         min-width: 100%
         height: 100vh
@@ -17,13 +19,14 @@
         position: relative
         transition: transform 1s
         &--caption
-            position: relative
+            position: absolute
             display: flex
             flex-direction: column
             align-items: center
             justify-content: center
             min-height: 300px
             width: 100%
+            top: 33%
         &:hover
             transform: scale(1.1)
         &--image
@@ -71,6 +74,8 @@
             &::after
                 content: ''
                 position: absolute
+        &--title
+            color: #ffffff
 
 .hero__title
     display: flex
@@ -78,8 +83,8 @@
     justify-content: center
     align-items: center
     height: 100vh
+    width: 50vw
     text-align: center
-    padding: 20px
     position: relative
     &::before
         content: ''
