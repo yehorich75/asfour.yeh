@@ -16,14 +16,20 @@ section.product
         &--link
             text-decoration: none
             position: relative
-        &--title
-            font-weight: 600
-            letter-spacing: 1px
-            color: $blue-color
-            position: absolute
-            top: 70%
-            background: #ffffff
-            padding: 10px 15px
+        &--info
+            margin: 0 auto
+            display: flex
+            &-title
+                font-size: 1.3rem
+                font-weight: 600
+                letter-spacing: 4px
+                color: $blue-color
+                background: #ffffff
+                padding: 10px 15px
+                transform: rotate(-180deg)
+                writing-mode: tb-rl
+            &-img
+                width: 200px
         &--img
             min-width: 100%
             min-height: 100%

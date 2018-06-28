@@ -3,9 +3,15 @@ section#product.product
         h2 Продукция
         .product__items
             .product__item.product__item--even
-                a.product__item--link(href="#")
-                    img.product__item--img(src="images/product/figurines.jpg")
-                .product__item--title Статуэтки
+                .product__item--main
+                    a.product__item--link(href="#")
+                        img.product__item--img(src="images/product/figurines.jpg")
+                .product__item--info
+                    h4.product__item--info-title Статуэтки
+                    .product__item--info-img
+                        img(src="images/product/figurines.jpg")
+                        img(src="images/product/figurines.jpg")
+
                     
 
             .product__item.product__item--odd
