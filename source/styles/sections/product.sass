@@ -8,6 +8,7 @@ section.product
     .product__item
         // width: calc(33.33% - 20px)
         display: flex
+        justify-content: space-between
         align-items: center
         overflow: hidden
         position: relative
@@ -19,23 +20,25 @@ section.product
         &--info
             margin: 0 auto
             display: flex
-            &-title
-                font-size: 1.3rem
-                font-weight: 600
-                letter-spacing: 4px
-                color: $blue-color
-                background: #ffffff
-                padding: 10px 15px
-                transform: rotate(-180deg)
-                writing-mode: tb-rl
             &-img
                 width: 200px
         &--img
             min-width: 100%
             min-height: 100%
+        h4.product__item--title
+            font-size: 1.3rem
+            font-weight: 600
+            letter-spacing: 4px
+            color: $blue-color
+            background: #ffffff
+            padding: 15px
+            writing-mode: tb-rl
         &--even
             flex-direction: row-reverse
- 
+            h4.product__item--title
+                transform: rotate(-180deg)
+                
+
             
         
 
