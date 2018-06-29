@@ -13,7 +13,10 @@ section.product
         overflow: hidden
         position: relative
         border: 2px solid #f5f5f5
+        background: #ffffff
         margin-bottom: 30px
+        padding: 20px
+        box-shadow: -3px 4px 5px 0px #e1e1e1
         &--link
             text-decoration: none
             position: relative
@@ -30,13 +33,19 @@ section.product
             font-weight: 600
             letter-spacing: 4px
             color: $blue-color
-            background: #ffffff
             padding: 15px
             writing-mode: tb-rl
+            background: #ffffff
+            z-index: 2
+            position: absolute
         &--even
             flex-direction: row-reverse
             h4.product__item--title
                 transform: rotate(-180deg)
+                right: 5%
+        &--odd
+            h4.product__item--title
+                left: -1%
                 
 
             
