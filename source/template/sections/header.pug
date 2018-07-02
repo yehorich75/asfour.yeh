@@ -1,27 +1,27 @@
 header.top
-    .hero__title
+    .hero__title#hero-title
         a.logo: img.logo__picture(src="images/asfour-logo.svg")
         nav.nav
             a.nav__link.nav__link--active(href="index.html") Главная
             a.nav__link(href="#product") Продукция
-            a.nav__link(href="#") Сертификаты
-            a.nav__link(href="#") Контакты
+            a.nav__link(href="#certificate") Сертификаты
+            a.nav__link(href="#contacts") Контакты
 
         .contacts
             .contacts__item.contacts__address
                 i.fas.fa-map-marker-alt
-                span Украина,&nbsp г.Киев,&nbspпр-т Краснозвездный,&nbsp126г
+                span Украина,&nbsp г.Киев,&nbspпр-т Лобановского,&nbsp126г
 
-            .contacts__item
-                .contacts__phones.contacts__phones--phone
+            .contacts__item.contacts__phones
+                .contacts__phone.contacts__phone--phone
                     i.fas.fa-phone
-                    span 044 5859920
-                .contacts__phones.contacts__phones--fax
+                    span 044 585-99-20
+                .contacts__phone.contacts__phone--fax
                     i.fas.fa-fax
-                    span 044 5225814
-                .contacts__phones.contacts__phones--mobile
+                    span 044 522-58-14
+                .contacts__phone.contacts__phone--mobile
                     i.fas.fa-mobile-alt
-                    span 063 7192773
+                    span 063 719-27-73
 
             .contacts__item.contacts__mail--item
                 a(href="mailto:asfour@asfour.com.ua")
@@ -30,7 +30,7 @@ header.top
 
     .hero
         .hero__video
-            img.hero__video--image(src="https://media.giphy.com/media/OSb0awyNHmKnDvXWyR/giphy.gif" width="890" height="403")
+            img.hero__video--image(src="images/hero/hero-img.jpg" width="890" height="403")
             .hero__video--caption
                 a.hero__video--button(href="https://youtu.be/NFNoRPJAuw8" data-source="https://youtu.be/NFNoRPJAuw8")
                 h4.hero__video--title Видео презентация
