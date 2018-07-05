@@ -16,78 +16,75 @@ const rename = require('gulp-rename');
 
 /* -------- Server  -------- */
 gulp.task('server', function() {
-    browserSync.init({
-        server: {
-            port: 9000,
-            baseDir: "build"
-        }
-    });
+  browserSync.init({
+    server: {
+      port: 9000,
+      baseDir: "build"
+    }
+  });
 
-    gulp.watch('build/**/*').on('change', browserSync.reload);
+  gulp.watch('build/**/*').on('change', browserSync.reload);
 });
 
 /* ------------ Pug compile ------------- */
 gulp.task('templates:compile', function buildHTML() {
-    return gulp.src('source/template/*.pug')
-        .pipe(pug({
-            pretty: true
-        }))
-        .pipe(gulp.dest('build'))
+  return gulp.src('source/template/index.pug')
+    .pipe(pug({
+      pretty: true
+    }))
+    .pipe(gulp.dest('build'))
 });
 
 /* ------------ Styles compile ------------- */
-gulp.task('styles:compile', function() {
-    return gulp.src('source/styles/main.sass')
-        // .pipe(sourcemaps.init())
-        .pipe(postcss([autoprefixer('last 3 versions')]))
-        // .pipe(sourcemaps.write())
-        .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
-        .pipe(rename('main.min.css'))
-        .pipe(gulp.dest('build/css'));
+gulp.task('styles:compile', function () {
+  return gulp.src('source/styles/main.sass')
+    // .pipe(sourcemaps.init())
+    .pipe(postcss([autoprefixer('last 3 versions')]))
+    // .pipe(sourcemaps.write())
+    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+    .pipe(rename('main.min.css'))
+    .pipe(gulp.dest('build/css'));
 });
 
 /* ------------ Scripts compile ------------- */
 gulp.task('scripts', function() {
-	return gulp.src([
-			// Библиотеки
-			'node_modules/slick-carousel/slick/slick.min.js'
-		])
-		.pipe(concat('libs.min.js'))
-		.pipe(uglify())
-		.pipe(gulp.dest('build/scripts'))
-		.pipe(browserSync.reload({
-			stream: true
-		}));
+  return gulp.src('source/scripts/*.js')
+      .pipe(rename('main.min.js'))
+      .pipe(concat('main.min.js'))
+      .pipe(gulp.dest('build/scripts'))
+      .pipe(browserSync.reload({
+          stream: true
+      }));
 });
 
 /* ------------ Sprite ------------- */
 gulp.task('sprite', function(cb) {
-    const spriteData = gulp.src('source/images/icons/*.png').pipe(spritesmith({
-        imgName: 'sprite.png',
-        imgPath: '../images/sprite.png',
-        cssName: 'sprite.scss'
-    }));
+  const spriteData = gulp.src('source/images/icons/*.png').pipe(spritesmith({
+    imgName: 'sprite.png',
+    imgPath: '../images/sprite.png',
+    cssName: 'sprite.scss'
+  }));
 
-    spriteData.img.pipe(gulp.dest('build/images/'));
-    spriteData.css.pipe(gulp.dest('source/styles/global/'));
-    cb();
+  spriteData.img.pipe(gulp.dest('build/images/'));
+  spriteData.css.pipe(gulp.dest('source/styles/global/'));
+  cb();
 });
 
 /* ------------ Delete ------------- */
 gulp.task('clean', function del(cb) {
-    return rimraf('build', cb);
+  return rimraf('build', cb);
 });
 
 /* ------------ Copy fonts ------------- */
 gulp.task('copy:fonts', function() {
-    return gulp.src('./source/fonts/**/*.*')
-        .pipe(gulp.dest('build/fonts'));
+  return gulp.src('./source/fonts/**/*.*')
+    .pipe(gulp.dest('build/fonts'));
 });
 
 /* ------------ Copy images ------------- */
 gulp.task('copy:images', function() {
-    return gulp.src('./source/images/**/*.*')
-        .pipe(gulp.dest('build/images'));
+  return gulp.src('./source/images/**/*.*')
+    .pipe(gulp.dest('build/images'));
 });
 
 /* ------------ Copy ------------- */
@@ -95,12 +92,14 @@ gulp.task('copy', gulp.parallel('copy:fonts', 'copy:images'));
 
 /* ------------ Watchers ------------- */
 gulp.task('watch', function() {
-    gulp.watch('source/template/**/*.pug', gulp.series('templates:compile'));
-    gulp.watch('source/styles/**/*.sass', gulp.series('styles:compile'));
+  gulp.watch('source/template/**/*.pug', gulp.series('templates:compile'));
+  gulp.watch('source/styles/**/*.sass', gulp.series('styles:compile'));
 });
 
 gulp.task('default', gulp.series(
-    'clean',
-    gulp.parallel('templates:compile', 'styles:compile', 'sprite', 'copy'),
-    gulp.parallel('watch', 'server')
-));
+  'clean',
+  gulp.parallel('templates:compile', 'styles:compile', 'sprite', 'copy', 'scripts'),
+  gulp.parallel('watch', 'server')
+  )
+);
+

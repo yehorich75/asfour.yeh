@@ -10,8 +10,12 @@ window.onscroll = function() {
     }
   };
 
-  $(document).ready(function(){
+
+
+$(document).ready(function() {
   $('.hero__video').slick({
-    autoplay: true
+    autoplay: true,
+    fade: true,
+    speed: 800
   });
 });
