@@ -3,6 +3,8 @@ const browserSync = require('browser-sync').create();
 const pug = require('gulp-pug');
 const sass = require('gulp-sass');
 const postcss = require('gulp-postcss');
+const concat = require('gulp-concat');
+const uglify = require('gulp-uglify');
 // const sourcemaps = require('gulp-sourcemaps');
 const autoprefixer = require('autoprefixer');
 const spritesmith = require('gulp.spritesmith');
@@ -42,6 +44,20 @@ gulp.task('styles:compile', function() {
         .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
         .pipe(rename('main.min.css'))
         .pipe(gulp.dest('build/css'));
+});
+
+/* ------------ Scripts compile ------------- */
+gulp.task('scripts', function() {
+	return gulp.src([
+			// Библиотеки
+			'node_modules/slick-carousel/slick/slick.min.js'
+		])
+		.pipe(concat('libs.min.js'))
+		.pipe(uglify())
+		.pipe(gulp.dest('build/scripts'))
+		.pipe(browserSync.reload({
+			stream: true
+		}));
 });
 
 /* ------------ Sprite ------------- */

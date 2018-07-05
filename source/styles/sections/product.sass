@@ -10,7 +10,6 @@ section.product
         position: relative
         background: #ffffff
         margin-bottom: 30px
-        padding: 20px
         box-shadow: -3px 4px 5px 0px #e1e1e1
         &--link
             text-decoration: none
@@ -26,9 +25,10 @@ section.product
                     width: 200px
                     height: 200px
             &-text
-                padding: 20px
+                padding: 0 55px
                 display: flex
                 flex-direction: column
+                line-height: 26px
                 i 
                     padding: 0 0 0 10px
                     font-size: 1.5rem
@@ -47,10 +47,12 @@ section.product
             position: absolute
         &--even
             flex-direction: row-reverse
+            padding: 20px 20px 20px 0
             h4.product__item--title
                 transform: rotate(-180deg)
                 right: 7%
         &--odd
+            padding: 20px 0 20px 20px
             h4.product__item--title
                 left: 1%
                 
