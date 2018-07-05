@@ -44,6 +44,16 @@ gulp.task('styles:compile', function () {
     .pipe(gulp.dest('build/css'));
 });
 
+/* ------------ Scripts compile ------------- */
+gulp.task('scripts', function() {
+  return gulp.src('source/scripts/*.js')
+      .pipe(rename('main.min.js'))
+      .pipe(gulp.dest('build/scripts/'))
+      .pipe(browserSync.reload({
+          stream: true
+      }));
+});
+
 /* ------------ Sprite ------------- */
 gulp.task('sprite', function(cb) {
   const spriteData = gulp.src('source/images/icons/*.png').pipe(spritesmith({
@@ -85,7 +95,7 @@ gulp.task('watch', function() {
 
 gulp.task('default', gulp.series(
   'clean',
-  gulp.parallel('templates:compile', 'styles:compile', 'sprite', 'copy'),
+  gulp.parallel('templates:compile', 'styles:compile', 'sprite', 'copy', 'scripts'),
   gulp.parallel('watch', 'server')
   )
 );
