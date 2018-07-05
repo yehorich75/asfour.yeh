@@ -15,7 +15,6 @@ window.onscroll = function() {
 $(document).ready(function() {
   $('.hero__video').slick({
     autoplay: true,
-    fade: true,
     speed: 800
   });
 });
