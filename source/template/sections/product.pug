@@ -82,20 +82,28 @@ section#product.product
                     .product__item--info-text
                         p Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, consequuntur aliquam! Obcaecati aspernatur molestias facere ratione sed saepe aliquam velit?
 
-            - var product_array = [
-                {
-                    title: 'Статуэтки', 
-                    link: '"figurines.html"', 
-                    item_img: '"images/product/figurines.jpg"', 
-                    img_1: 'figurines-thumb-1.jpg', 
-                    img_2: 'figurines-thumb-2.jpg', 
-                    text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, consequuntur aliquam! Obcaecati aspernatur molestias facere ratione sed saepe aliquam velit?'
-                }
-            ]   
+            //- - var products = [
+            //-     {
+            //-         title: "Статуэтки", 
+            //-         link: '"figurines.html"', 
+            //-         item_img: '"images/product/figurines.jpg"', 
+            //-         img_1: 'figurines-thumb-1.jpg', 
+            //-         img_2: 'figurines-thumb-2.jpg', 
+            //-         text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, consequuntur aliquam! Obcaecati aspernatur molestias facere ratione sed saepe aliquam velit?'
+            //-     },
+            //-     {
+            //-         title: "Статуэтки", 
+            //-         link: '"figurines.html"', 
+            //-         item_img: '"images/product/figurines.jpg"', 
+            //-         img_1: 'figurines-thumb-1.jpg', 
+            //-         img_2: 'figurines-thumb-2.jpg', 
+            //-         text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, consequuntur aliquam! Obcaecati aspernatur molestias facere ratione sed saepe aliquam velit?'
+            //-     }
+            //- ]; 
 
-            each val in product_array
-                 .product__item.product__item--even
-                    h4.product__item--title #{val.title}
-                    .product__item--main
-                        a.product__item--link(href=val.link)
-                            img.product__item--img(src=val.item_img)
+            //- .product__item.product__item--even
+            //-     each product in products
+            //-         h4.product__item--title product.title
+            //-         .product__item--main
+            //-             a.product__item--link(href=product.link)
+            //-                 img.product__item--img(src=product.item_img)
