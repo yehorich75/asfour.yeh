@@ -35,7 +35,7 @@ section#product.product
             .product__item.product__item--even
                 h4.product__item--title Хрустальная плитка
                 .product__item--main
-                    a.product__item--link(href="#")
+                    a.product__item--link(href="crys-tail.html")
                         img.product__item--img(src="images/product/tile.jpg")
                 .product__item--info
                     .product__item--info-img.columns
@@ -82,28 +82,31 @@ section#product.product
                     .product__item--info-text
                         p Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, consequuntur aliquam! Obcaecati aspernatur molestias facere ratione sed saepe aliquam velit?
 
-            //- - var products = [
-            //-     {
-            //-         title: "Статуэтки", 
-            //-         link: '"figurines.html"', 
-            //-         item_img: '"images/product/figurines.jpg"', 
-            //-         img_1: 'figurines-thumb-1.jpg', 
-            //-         img_2: 'figurines-thumb-2.jpg', 
-            //-         text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, consequuntur aliquam! Obcaecati aspernatur molestias facere ratione sed saepe aliquam velit?'
-            //-     },
-            //-     {
-            //-         title: "Статуэтки", 
-            //-         link: '"figurines.html"', 
-            //-         item_img: '"images/product/figurines.jpg"', 
-            //-         img_1: 'figurines-thumb-1.jpg', 
-            //-         img_2: 'figurines-thumb-2.jpg', 
-            //-         text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, consequuntur aliquam! Obcaecati aspernatur molestias facere ratione sed saepe aliquam velit?'
-            //-     }
-            //- ]; 
-
-            //- .product__item.product__item--even
-            //-     each product in products
-            //-         h4.product__item--title product.title
-            //-         .product__item--main
-            //-             a.product__item--link(href=product.link)
-            //-                 img.product__item--img(src=product.item_img)
+            -   
+                var products = [
+                    {
+                    class: 'even',
+                    title: "Статуэтки", 
+                    link: 'figurines.html', 
+                    item_img: 'images/product/figurines.jpg', 
+                    img_1: 'figurines-thumb-1.jpg', 
+                    img_2: 'figurines-thumb-2.jpg', 
+                    text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, consequuntur aliquam! Obcaecati aspernatur molestias facere ratione sed saepe aliquam velit?'
+                    },
+                    {
+                    class: 'odd',
+                    title: "Хрустальная плитка", 
+                    link: 'crys-tail.html', 
+                    item_img: 'images/product/tile.jpg', 
+                    img_1: 'figurines-thumb-1.jpg', 
+                    img_2: 'figurines-thumb-2.jpg', 
+                    text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, consequuntur aliquam! Obcaecati aspernatur molestias facere ratione sed saepe aliquam velit?'
+                    }
+                ]; 
+            .product__items
+                each product in products
+                    .product__item.product__item--=`${product.class}`
+                        h4.product__item--title= product.title
+                        .product__item--main
+                            a.product__item--link(href= product.link)
+                                img.product__item--img(src= product.item_img)
