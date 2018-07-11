@@ -82,11 +82,11 @@ section#product.product
                     .product__item--info-text
                         p Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, consequuntur aliquam! Obcaecati aspernatur molestias facere ratione sed saepe aliquam velit?
 
-            var product_array = [
+            - var product_array = [
                 {
                     title: 'Статуэтки', 
-                    link: 'href="figurines.html"', 
-                    item_img: 'figurines.jpg', 
+                    link: '"figurines.html"', 
+                    item_img: '"images/product/figurines.jpg"', 
                     img_1: 'figurines-thumb-1.jpg', 
                     img_2: 'figurines-thumb-2.jpg', 
                     text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, consequuntur aliquam! Obcaecati aspernatur molestias facere ratione sed saepe aliquam velit?'
@@ -95,6 +95,7 @@ section#product.product
 
             each val in product_array
                  .product__item.product__item--even
-                    h4.product__item--title!= val.title
+                    h4.product__item--title #{val.title}
                     .product__item--main
-                        a.product__item--link(href=val.href)
+                        a.product__item--link(href=val.link)
+                            img.product__item--img(src=val.item_img)
