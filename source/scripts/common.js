@@ -15,6 +15,11 @@ window.onscroll = function() {
 $(document).ready(function() {
   $('.hero__video').slick({
     autoplay: true,
-    speed: 800
+    autoplaySpeed: 3000,
+    dots: true,
+    adaptiveHeight: true,
+    fade: true,
+    cssEase: 'linear',
+    arrows: true
   });
 });
