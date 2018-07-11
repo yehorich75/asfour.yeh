@@ -3,6 +3,8 @@ const browserSync = require('browser-sync').create();
 const pug = require('gulp-pug');
 const sass = require('gulp-sass');
 const postcss = require('gulp-postcss');
+const concat = require('gulp-concat');
+const uglify = require('gulp-uglify');
 // const sourcemaps = require('gulp-sourcemaps');
 const autoprefixer = require('autoprefixer');
 const spritesmith = require('gulp.spritesmith');
@@ -48,7 +50,8 @@ gulp.task('styles:compile', function () {
 gulp.task('scripts', function() {
   return gulp.src('source/scripts/*.js')
       .pipe(rename('main.min.js'))
-      .pipe(gulp.dest('build/scripts/'))
+      .pipe(concat('main.min.js'))
+      .pipe(gulp.dest('build/scripts'))
       .pipe(browserSync.reload({
           stream: true
       }));
@@ -99,3 +102,4 @@ gulp.task('default', gulp.series(
   gulp.parallel('watch', 'server')
   )
 );
+

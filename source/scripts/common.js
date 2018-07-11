@@ -9,3 +9,12 @@ window.onscroll = function() {
         heroTitleElem.classList.add('fixed');
     }
   };
+
+
+
+$(document).ready(function() {
+  $('.hero__video').slick({
+    autoplay: true,
+    speed: 800
+  });
+});
