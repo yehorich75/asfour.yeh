@@ -105,8 +105,22 @@ section#product.product
                 ]; 
             .product__items
                 each product in products
-                    .product__item.product__item--=`${product.class}`
+                    .product__item.product__item--even
                         h4.product__item--title= product.title
                         .product__item--main
                             a.product__item--link(href= product.link)
                                 img.product__item--img(src= product.item_img)
+
+            -
+                var productItem = { class: '.even' }
+                var productItem = false
+            .product__item--even
+                if productItem.class
+                    each product in products
+                        h4.product__item--title= product.title
+                        .product__item--main
+                            a.product__item--link(href= product.link)
+                                img.product__item--img(src= product.item_img)
+                else if productItem
+
+
