@@ -82,45 +82,55 @@ section#product.product
                     .product__item--info-text
                         p Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, consequuntur aliquam! Obcaecati aspernatur molestias facere ratione sed saepe aliquam velit?
 
-            -   
-                var products = [
-                    {
-                    class: 'even',
-                    title: "Статуэтки", 
-                    link: 'figurines.html', 
-                    item_img: 'images/product/figurines.jpg', 
-                    img_1: 'figurines-thumb-1.jpg', 
-                    img_2: 'figurines-thumb-2.jpg', 
-                    text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, consequuntur aliquam! Obcaecati aspernatur molestias facere ratione sed saepe aliquam velit?'
-                    },
-                    {
-                    class: 'odd',
-                    title: "Хрустальная плитка", 
-                    link: 'crys-tail.html', 
-                    item_img: 'images/product/tile.jpg', 
-                    img_1: 'figurines-thumb-1.jpg', 
-                    img_2: 'figurines-thumb-2.jpg', 
-                    text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, consequuntur aliquam! Obcaecati aspernatur molestias facere ratione sed saepe aliquam velit?'
-                    }
-                ]; 
-            .product__items
-                each product in products
-                    .product__item.product__item--even
-                        h4.product__item--title= product.title
-                        .product__item--main
-                            a.product__item--link(href= product.link)
-                                img.product__item--img(src= product.item_img)
+        -   
+            var products = [
+                {
+                class: 'even',
+                title: "Статуэтки", 
+                link: 'figurines.html', 
+                item_img: 'images/product/figurines.jpg', 
+                img_1: 'figurines-thumb-1.jpg', 
+                img_2: 'figurines-thumb-2.jpg', 
+                text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, consequuntur aliquam! Obcaecati aspernatur molestias facere ratione sed saepe aliquam velit?'
+                },
+                {
+                class: 'odd',
+                title: "Хрустальная плитка", 
+                link: 'crys-tail.html', 
+                item_img: 'images/product/tile.jpg', 
+                img_1: 'figurines-thumb-1.jpg', 
+                img_2: 'figurines-thumb-2.jpg', 
+                text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, consequuntur aliquam! Obcaecati aspernatur molestias facere ratione sed saepe aliquam velit?'
+                }
+            ]; 
+        .product__items
+            each product in products
+                .product__item.product__item--even
+                    h4.product__item--title= product.title
+                    .product__item--main
+                        a.product__item--link(href= product.link)
+                            img.product__item--img(src= product.item_img)
 
-            -
-                var productItem = { class: '.even' }
-                var productItem = false
-            .product__item--even
-                if productItem.class
-                    each product in products
-                        h4.product__item--title= product.title
-                        .product__item--main
-                            a.product__item--link(href= product.link)
-                                img.product__item--img(src= product.item_img)
-                else if productItem
+            //- -
+            //-     var productItem = { class: '.even' }
+            //-     var productItem = false
+            //- .product__item--even
+            //-     if productItem.class
+            //-         each product in products
+            //-             h4.product__item--title= product.title
+            //-             .product__item--main
+            //-                 a.product__item--link(href= product.link)
+            //-                     img.product__item--img(src= product.item_img)
+            //-     else if productItem
 
+            //- mixin container(class)
+            //-     div(class='container.{class}')
+            //-         h1 weee
+
+            //- if true
+            //-     mixin container(1)
+            //- else
+            //-     mixin container(2)
+
+            div(class="product__item--.{condition ? else : odd}")
 
