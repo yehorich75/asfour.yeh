@@ -82,45 +82,23 @@ section#product.product
                     .product__item--info-text
                         p Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, consequuntur aliquam! Obcaecati aspernatur molestias facere ratione sed saepe aliquam velit?
 
-            -   
-                var products = [
-                    {
-                    class: 'even',
-                    title: "Статуэтки", 
-                    link: 'figurines.html', 
-                    item_img: 'images/product/figurines.jpg', 
-                    img_1: 'figurines-thumb-1.jpg', 
-                    img_2: 'figurines-thumb-2.jpg', 
-                    text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, consequuntur aliquam! Obcaecati aspernatur molestias facere ratione sed saepe aliquam velit?'
-                    },
-                    {
-                    class: 'odd',
-                    title: "Хрустальная плитка", 
-                    link: 'crys-tail.html', 
-                    item_img: 'images/product/tile.jpg', 
-                    img_1: 'figurines-thumb-1.jpg', 
-                    img_2: 'figurines-thumb-2.jpg', 
-                    text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, consequuntur aliquam! Obcaecati aspernatur molestias facere ratione sed saepe aliquam velit?'
-                    }
-                ]; 
-            .product__items
-                each product in products
-                    .product__item.product__item--even
-                        h4.product__item--title= product.title
-                        .product__item--main
-                            a.product__item--link(href= product.link)
-                                img.product__item--img(src= product.item_img)
 
-            -
-                var productItem = { class: '.even' }
-                var productItem = false
-            .product__item--even
-                if productItem.class
-                    each product in products
-                        h4.product__item--title= product.title
-                        .product__item--main
-                            a.product__item--link(href= product.link)
-                                img.product__item--img(src= product.item_img)
-                else if productItem
+
+            mixin product(title, link, item_img, img_1, img_2, text)
+                h4.product__item--title= title
+                .product__item--main
+                    a.product__item--link(href= link)
+                        img.product__item--img(src= item_img)
+                .product__item--info
+                    .product__item--info-img.columns
+                        img.column(src= img_1)
+                        img.column(src= img_2)
+                    .product__item--info-text= text
+
+            .product__item.product__item--even
+                +product('Статуэтки', 'figurines.html', 'images/product/figurines.jpg', 'images/product/figurines-thumb-1.jpg', 'images/product/figurines-thumb-2.jpg', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, consequuntur aliquam! Obcaecati aspernatur molestias facere ratione sed saepe aliquam velit?')
+            .product__item.product__item--odd
+                +product('Хрустальные подвески', 'parts.html', 'images/product/crystal-parts.jpg', 'images/product/crystal-parts.jpg', 'images/product/crystal-parts.jpg', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, consequuntur aliquam! Obcaecati aspernatur molestias facere ratione sed saepe aliquam velit?')
+
 
 
