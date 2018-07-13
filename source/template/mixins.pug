@@ -1,0 +1,10 @@
+mixin product(title, link, item_img, img_1, img_2, text)
+    h4.product__item--title= title
+    .product__item--main
+        a.product__item--link(href= link)
+            img.product__item--img(src= item_img)
+    .product__item--info
+        .product__item--info-img.columns
+            img.column(src= img_1)
+            img.column(src= img_2)
+        .product__item--info-text= text

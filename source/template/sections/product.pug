@@ -19,16 +19,7 @@ section#product.product
                         a.column(href="http://asfour.com.ua/catalogues/Diamond Collection Catalog.pdf") Каталог 2 (13,3mb)
                             i.far.fa-file-pdf
                 
-            mixin product(title, link, item_img, img_1, img_2, text)
-                h4.product__item--title= title
-                .product__item--main
-                    a.product__item--link(href= link)
-                        img.product__item--img(src= item_img)
-                .product__item--info
-                    .product__item--info-img.columns
-                        img.column(src= img_1)
-                        img.column(src= img_2)
-                    .product__item--info-text= text
+            include ../mixins.pug
 
             .product__item.product__item--even
                 +product('Статуэтки', 'figurines.html', 'images/product/figurines.jpg', 'images/product/figurines-thumb-1.jpg', 'images/product/figurines-thumb-2.jpg', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, consequuntur aliquam! Obcaecati aspernatur molestias facere ratione sed saepe aliquam velit?')
