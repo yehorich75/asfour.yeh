@@ -3,9 +3,9 @@ header.top
         a.logo: img.logo__picture(src="images/asfour-logo.svg")
         nav.nav
             a.nav__link.nav__link--active(href="index.html") Главная
-            a.nav__link(href="#product") Продукция
-            a.nav__link(href="#certificate") Сертификаты
-            a.nav__link(href="#contacts") Контакты
+            a.nav__link(href="#product" data-scroll) Продукция
+            a.nav__link(href="#certificate" data-scroll) Сертификаты
+            a.nav__link(href="#contacts" data-scroll) Контакты
 
         .contacts
             .contacts__item.contacts__address
@@ -28,14 +28,27 @@ header.top
                     i.far.fa-envelope
                     span  asfour@asfour.com.ua
 
+        .socials
+            .socials__item
+                i.fab.fa-facebook-f
+            .socials__item
+                i.fab.fa-youtube
+            .socials__item
+                i.fab.fa-instagram
+
     .hero
-        .hero__video
-            img.hero__video--image(src="images/hero/hero-img.jpg")
-            img.hero__video--image(src="images/hero/hero-img-1.jpg")
-            img.hero__video--image(src="images/hero/hero-img-2.jpg")
-            img.hero__video--image(src="images/hero/hero-img-3.jpg")
-        .hero__video--caption
-            a.hero__video--button(href="https://youtu.be/NFNoRPJAuw8" data-source="https://youtu.be/NFNoRPJAuw8")
-            h4.hero__video--title Видео презентация
+        .hero__slider
+            img.hero__slider--image(src="images/hero/hero-img.jpg")
+            img.hero__slider--image(src="images/hero/hero-img-4.jpg")
+            img.hero__slider--image(src="images/hero/hero-img-5.jpg")
+            img.hero__slider--image(src="images/hero/hero-img-6.jpg")
+        .hero__controls
+            .hero__captions
+                .hero__captions--caption This is a caption for slide 1
+                .hero__captions--caption This is a caption for slide 2
+                .hero__captions--caption This is a caption for slide 3
+                .hero__captions--caption This is a caption for slide 4
+        .pagination
+
 
 

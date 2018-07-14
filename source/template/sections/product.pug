@@ -3,134 +3,17 @@ section#product.product
         h2 Продукция
         .product__items
 
-            .product__item.product__item--even
-                h4.product__item--title Статуэтки
-                .product__item--main
-                    a.product__item--link(href="figurines.html")
-                        img.product__item--img(src="images/product/figurines.jpg")
-                .product__item--info
-                    .product__item--info-img.columns
-                        img.column(src="images/product/figurines-thumb-1.jpg")
-                        img.column(src="images/product/figurines-thumb-2.jpg")
-                    .product__item--info-text.columns
-                        p.column Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, consequuntur aliquam! Obcaecati aspernatur molestias facere ratione sed saepe aliquam velit?
-                        a.column(href="http://asfour.com.ua/catalogues/Crystal_Figurines.pdf") Каталог 1 (6,73mb)
-                            i.far.fa-file-pdf
-                        a.column(href="http://asfour.com.ua/catalogues/Diamond Collection Catalog.pdf") Каталог 2 (13,3mb)
-                            i.far.fa-file-pdf
-                
-            .product__item.product__item--odd
-                h4.product__item--title Хрустальные подвески
-                .product__item--main
-                    a.product__item--link(href="#")
-                        img.product__item--img(src="images/product/crystal-parts.jpg")
-                .product__item--info
-                    .product__item--info-img.columns
-                        img.column(src="images/product/crystal-parts.jpg")
-                        img.column(src="images/product/crystal-parts.jpg")
-                    .product__item--info-text
-                        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, consequuntur aliquam! Obcaecati aspernatur molestias facere ratione sed saepe aliquam velit?
-                
-                
-            .product__item.product__item--even
-                h4.product__item--title Хрустальная плитка
-                .product__item--main
-                    a.product__item--link(href="crys-tail.html")
-                        img.product__item--img(src="images/product/tile.jpg")
-                .product__item--info
-                    .product__item--info-img.columns
-                        img.column(src="images/product/tile.jpg")
-                        img.column(src="images/product/tile.jpg")
-                    .product__item--info-text
-                        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, consequuntur aliquam! Obcaecati aspernatur molestias facere ratione sed saepe aliquam velit?
-                
-                    
-            .product__item.product__item--odd
-                h4.product__item--title 3D Сувениры
-                .product__item--main
-                    a.product__item--link(href="#")
-                        img.product__item--img(src="images/product/chandeliers.jpg")
-                .product__item--info
-                    .product__item--info-img.columns
-                        img.column(src="images/product/chandeliers.jpg")
-                        img.column(src="images/product/chandeliers.jpg")
-                    .product__item--info-text
-                        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, consequuntur aliquam! Obcaecati aspernatur molestias facere ratione sed saepe aliquam velit?
-                
-                    
-            .product__item.product__item--even
-                h4.product__item--title Светильники
-                .product__item--main
-                    a.product__item--link(href="#")
-                        img.product__item--img(src="images/product/chandeliers.jpg")
-                .product__item--info
-                    .product__item--info-img.columns
-                        img.column(src="images/product/chandeliers.jpg")
-                        img.column(src="images/product/chandeliers.jpg")
-                    .product__item--info-text
-                        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, consequuntur aliquam! Obcaecati aspernatur molestias facere ratione sed saepe aliquam velit?
-                    
-            .product__item.product__item--odd
-                h4.product__item--title Стразы
-                .product__item--main
-                    a.product__item--link(href="#")
-                        img.product__item--img(src="images/product/chandeliers.jpg")
-                .product__item--info
-                    .product__item--info-img.columns
-                        img.column(src="images/product/chandeliers.jpg")
-                        img.column(src="images/product/chandeliers.jpg")
-                    .product__item--info-text
-                        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, consequuntur aliquam! Obcaecati aspernatur molestias facere ratione sed saepe aliquam velit?
+            include ../mixins.pug
 
-        -   
-            var products = [
-                {
-                class: 'even',
-                title: "Статуэтки", 
-                link: 'figurines.html', 
-                item_img: 'images/product/figurines.jpg', 
-                img_1: 'figurines-thumb-1.jpg', 
-                img_2: 'figurines-thumb-2.jpg', 
-                text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, consequuntur aliquam! Obcaecati aspernatur molestias facere ratione sed saepe aliquam velit?'
-                },
-                {
-                class: 'odd',
-                title: "Хрустальная плитка", 
-                link: 'crys-tail.html', 
-                item_img: 'images/product/tile.jpg', 
-                img_1: 'figurines-thumb-1.jpg', 
-                img_2: 'figurines-thumb-2.jpg', 
-                text: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, consequuntur aliquam! Obcaecati aspernatur molestias facere ratione sed saepe aliquam velit?'
-                }
-            ]; 
-        .product__items
-            each product in products
-                .product__item.product__item--even
-                    h4.product__item--title= product.title
-                    .product__item--main
-                        a.product__item--link(href= product.link)
-                            img.product__item--img(src= product.item_img)
+            +product-even('Статуэтки', 'figurines.html', 'images/product/figurines.jpg', 'images/product/figurines-thumb-1.jpg', 'images/product/figurines-thumb-2.jpg', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, consequuntur aliquam! Obcaecati aspernatur molestias facere ratione sed saepe aliquam velit?', 'http://asfour.com.ua/catalogues/Crystal_Figurines.pdf', 'http://asfour.com.ua/catalogues/Diamond Collection Catalog.pdf')
 
-            //- -
-            //-     var productItem = { class: '.even' }
-            //-     var productItem = false
-            //- .product__item--even
-            //-     if productItem.class
-            //-         each product in products
-            //-             h4.product__item--title= product.title
-            //-             .product__item--main
-            //-                 a.product__item--link(href= product.link)
-            //-                     img.product__item--img(src= product.item_img)
-            //-     else if productItem
+            +product-odd('Хрустальные подвески', 'parts.html', 'images/product/crystal-parts.jpg', 'images/product/crystal-parts.jpg', 'images/product/crystal-parts.jpg', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, consequuntur aliquam! Obcaecati aspernatur molestias facere ratione sed saepe aliquam velit?')
 
-            //- mixin container(class)
-            //-     div(class='container.{class}')
-            //-         h1 weee
+            +product-even('Хрустальная плитка', 'crys-tail.html', 'images/product/tile.jpg', 'images/product/tile.jpg', 'images/product/tile.jpg', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, consequuntur aliquam! Obcaecati aspernatur molestias facere ratione sed saepe aliquam velit?')
 
-            //- if true
-            //-     mixin container(1)
-            //- else
-            //-     mixin container(2)
+            +product-odd('3D Сувениры', '#', 'images/product/chandeliers.jpg', 'images/product/chandeliers.jpg', 'images/product/chandeliers.jpg', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, consequuntur aliquam! Obcaecati aspernatur molestias facere ratione sed saepe aliquam velit?')
 
-            div(class="product__item--.{condition ? else : odd}")
+            +product-even('Светильники', 'chandeliers.html', 'images/product/chandeliers.jpg', 'images/product/chandeliers.jpg', 'images/product/chandeliers.jpg', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, consequuntur aliquam! Obcaecati aspernatur molestias facere ratione sed saepe aliquam velit?')
+
+            +product-odd('Стразы', '#', 'images/product/chandeliers.jpg', 'images/product/chandeliers.jpg', 'images/product/chandeliers.jpg', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, consequuntur aliquam! Obcaecati aspernatur molestias facere ratione sed saepe aliquam velit?')
 
