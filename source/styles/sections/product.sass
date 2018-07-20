@@ -1,61 +1,31 @@
 section.product
     background: #ebebeb
+    heigh: 100vh
 
 .product__items
+    display: flex
+    flex-wrap: wrap
     .product__item
-        display: flex
-        justify-content: space-between
-        align-items: center
-        overflow: hidden
+        width: calc(30% - 20px)
         position: relative
         background: #ffffff
-        margin-bottom: 30px
+        margin: 0 10px 30px
         box-shadow: -3px 4px 5px 0px #e1e1e1
         &--link
             text-decoration: none
             position: relative
-        &--info
-            margin: 0 auto
-            display: flex
-            flex-direction: column
-            width: 50%
-            &-img
-                margin: 0 auto 40px
-                img
-                    width: 200px
-                    height: 200px
-            &-text
-                padding: 0 55px
-                display: flex
-                flex-direction: column
-                line-height: 26px
-                i
-                    padding: 0 0 0 10px
-                    font-size: 1.5rem
-                    color: $red-color
         &--img
             min-width: 100%
             min-height: 100%
-
         h4.product__item--title
             font-weight: 600
             letter-spacing: 4px
             color: $blue-color
-            padding: 15px
-            writing-mode: tb-rl
+            padding: 0
             background: #ffffff
-            z-index: 2
-            position: absolute
-        &--even
-            flex-direction: row-reverse
-            padding: 20px 20px 20px 0
-            h4.product__item--title
-                transform: rotate(-180deg)
-                right: 7%
-        &--odd
-            padding: 20px 0 20px 20px
-            h4.product__item--title
-                left: 1%
+
+
+
 
 
 

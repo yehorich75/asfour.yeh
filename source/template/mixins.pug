@@ -1,27 +1,11 @@
-mixin product-even(title, link, item_img, img_1, img_2, text, catalog_1, catalog_2)
-    .product__item.product__item--even
+mixin product-card(title, link, item_img, img_1, img_2, text, catalog_1, catalog_2)
+    .product__item
         h4.product__item--title= title
         .product__item--main
             a.product__item--link(href= link)
                 img.product__item--img(src= item_img)
-        .product__item--info
-            .product__item--info-img.columns
-                img.column(src= img_1)
-                img.column(src= img_2)
-            .product__item--info-text= text
                 a(href= catalog_1) Каталог 1 (6,73mb)
                     i.far.fa-file-pdf
                 a(href= catalog_2) Каталог 2 (13,3mb)
                     i.far.fa-file-pdf
 
-mixin product-odd(title, link, item_img, img_1, img_2, text)
-    .product__item.product__item--odd
-        h4.product__item--title= title
-        .product__item--main
-            a.product__item--link(href= link)
-                img.product__item--img(src= item_img)
-        .product__item--info
-            .product__item--info-img.columns
-                img.column(src= img_1)
-                img.column(src= img_2)
-            .product__item--info-text= text
