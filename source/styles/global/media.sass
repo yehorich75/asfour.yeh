@@ -13,7 +13,60 @@
             .contacts__address
                 span
                     padding: 0 5px
-        .hero__controls
-            display: none
-            .hero__captions
-                display: none
+        .hero__slider
+            width: 100vw
+
+    .product__items
+        .product__item--odd,
+        .product__item--even
+            flex-direction: column
+            padding: 20px 0
+            .product__item--title
+                margin: 0 auto
+                transform: none
+                writing-mode: horizontal-tb
+                position: inherit
+            .product__item--info
+                width: 100%
+                text-align: center
+                .product__item--info-img
+                    img
+                        width: 50%
+                        padding: 10px 5px
+                &-text
+                    padding: 0 30px
+                    text-align: left
+
+@media (max-width: 720px)
+    .top
+        grid-template-columns: 100vw
+        .hero__title
+            width: 100vw
+            .logo
+                padding-top: 20px
+            .contacts__address
+                span
+                    padding: 0 5px
+        .hero__slider
+            width: 100vw
+
+    .product__items
+        .product__item--odd,
+        .product__item--even
+            flex-direction: column
+            padding: 20px 0
+            .product__item--title
+                margin: 0 auto
+                transform: none
+                writing-mode: horizontal-tb
+                position: inherit
+            .product__item--info
+                width: 100%
+                text-align: center
+                .product__item--info-img
+                    img
+                        width: 50%
+                        padding: 10px 5px
+                &-text
+                    padding: 0 30px
+                    text-align: left
