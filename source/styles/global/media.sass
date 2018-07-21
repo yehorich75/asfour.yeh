@@ -1,8 +1,3 @@
-@media (min-width: 1200px)
-    .hero__video--button
-        width: 75px
-        height: 75px
-
 @media (max-width: 360px)
     .top
         grid-template-columns: 100vw
@@ -13,25 +8,28 @@
             .contacts__address
                 span
                     padding: 0 5px
-        .hero__slider
-            width: 100vw
+        .hero
+            display: none
 
     .product__items
         .product__item--odd,
         .product__item--even
             flex-direction: column
             padding: 20px 0
-            .product__item--title
+            h4.product__item--title
                 margin: 0 auto
+                padding: 0 15px 15px
                 transform: none
                 writing-mode: horizontal-tb
                 position: inherit
+                right: 0
             .product__item--info
                 width: 100%
                 text-align: center
                 .product__item--info-img
                     img
                         width: 50%
+                        height: auto
                         padding: 10px 5px
                 &-text
                     padding: 0 30px
@@ -42,31 +40,34 @@
         grid-template-columns: 100vw
         .hero__title
             width: 100vw
-            .logo
-                padding-top: 20px
             .contacts__address
                 span
                     padding: 0 5px
-        .hero__slider
-            width: 100vw
+        .hero
+            display: none
 
-    .product__items
-        .product__item--odd,
-        .product__item--even
-            flex-direction: column
-            padding: 20px 0
-            .product__item--title
-                margin: 0 auto
-                transform: none
-                writing-mode: horizontal-tb
-                position: inherit
-            .product__item--info
+    .product
+        .product__items
+            .product__item
+                padding: 20px 0
                 width: 100%
-                text-align: center
-                .product__item--info-img
-                    img
-                        width: 50%
-                        padding: 10px 5px
-                &-text
-                    padding: 0 30px
-                    text-align: left
+                h4.product__item--title
+                    margin: 0 auto
+                    padding: 0 15px 15px
+                    transform: none
+                    writing-mode: horizontal-tb
+                    position: inherit
+                    right: 0
+                    .product__item--info-img
+                        img
+                            width: 100%
+                            height: 100%
+                            padding: 10px 5px
+                    &-text
+                        padding: 0 30px
+                        text-align: left
+
+    .certificate__items
+        .certificate__item
+            width: 100%
+
