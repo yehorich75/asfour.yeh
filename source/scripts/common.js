@@ -40,3 +40,11 @@ $(document).ready(function() {
 
 var scroll = new SmoothScroll('a[href*="#"]');
 var options = { speed: 3000, easing: "easeOutCubic" };
+
+// var loop = anime({
+//     targets: '#arrow-down',
+//     translateY: 20,
+//     duration: 3000,
+//     offset: 400,
+//     loop: true
+// });
