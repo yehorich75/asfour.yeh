@@ -10,32 +10,6 @@
     width: 100vw
     position: relative
 
-.arrow
-    height: 40px
-    width: 2px
-    background: #ffffff
-    margin: 0 auto $gap
-    animation: animate 2s infinite
-
-.arrow:before
-    content: ''
-    position: absolute
-    bottom: 1px
-    left: -9px
-    width: 20px
-    height: 20px
-    border-bottom: 2px solid #ffffff
-    border-right: 2px solid #ffffff
-    transform: rotate(45deg)
-
-@keyframes animate
-    0%
-        transform: translateY(0px)
-    50%
-        transform: translateY(10px)
-    100%
-        transform: translateY(0px)
-
 .hero__slider
     overflow: hidden
     width: 100vw
@@ -159,8 +133,7 @@
         text-transform: uppercase
         letter-spacing: 0.85px
         cursor: pointer
-        background: rgba(255, 255, 255, .7)
-        border: 1px solid #ffffff
+        background: rgb(255, 255, 255)
         &:hover
             color: $blue-color
         &__link--active
@@ -176,7 +149,7 @@
     flex-direction: column
     justify-content: flex-end
     align-items: center
-    width: 500px
+    min-width: 33%
     background: rgba(37, 28, 23, .6)
     position: absolute
     bottom: 0
@@ -215,5 +188,31 @@
         margin-right: 7px
         &--email
             font-size: 1.2rem
+
+.arrow
+    height: 40px
+    width: 2px
+    background: #ffffff
+    margin: 0 auto $gap
+    animation: animate 2s infinite
+
+.arrow:before
+    content: ''
+    position: absolute
+    bottom: 1px
+    left: -9px
+    width: 20px
+    height: 20px
+    border-bottom: 2px solid #ffffff
+    border-right: 2px solid #ffffff
+    transform: rotate(45deg)
+
+@keyframes animate
+    0%
+        transform: translateY(0px)
+    50%
+        transform: translateY(10px)
+    100%
+        transform: translateY(0px)
 
 
