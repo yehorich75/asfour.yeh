@@ -1,0 +1,54 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files\Yarn\bin\yarn.js add font-awesome
+
+PATH: 
+  C:\ProgramData\Oracle\Java\javapath;C:\Program Files\Common Files\Microsoft Shared\Windows Live;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Windows Live\Shared;C:\Program Files\Skype\Phone\;C:\Program Files\nodejs\;C:\Program Files\Yarn\bin;C:\Git\cmd;C:\Git\mingw32\bin;C:\Git\usr\bin;C:\Program Files\Microsoft VS Code\bin;C:\Users\Krasnozv\AppData\Roaming\npm;C:\Users\Krasnozv\AppData\Local\Yarn\bin;C:\Program Files\Microsoft VS Code\bin
+
+Yarn version: 
+  1.7.0
+
+Node version: 
+  6.11.4
+
+Platform: 
+  win32 ia32
+
+Trace: 
+  Error: EPERM: operation not permitted, unlink 'D:\OpenServer\domains\asfour.yeh\node_modules\node-sass\vendor\win32-ia32-48\binding.node'
+      at Error (native)
+
+npm manifest: 
+  {
+    "name": "asfour",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Yehor Oleksiieko",
+    "license": "ISC",
+    "devDependencies": {
+      "autoprefixer": "^8.4.1",
+      "browser-sync": "^2.18.8",
+      "gulp": "github:gulpjs/gulp#4.0",
+      "gulp-concat": "^2.6.1",
+      "gulp-postcss": "^7.0.1",
+      "gulp-pug": "^3.3.0",
+      "gulp-rename": "^1.2.2",
+      "gulp-sass": "^3.1.0",
+      "gulp-sourcemaps": "^2.6.4",
+      "gulp-uglify": "^3.0.0",
+      "gulp.spritesmith": "^6.3.0",
+      "rimraf": "^2.6.1"
+    },
+    "dependencies": {
+      "normalize.sass": "^3.0.3-2"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
