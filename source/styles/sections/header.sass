@@ -11,12 +11,10 @@
     position: relative
 
 .arrow
-    position: absolute
     height: 40px
     width: 2px
     background: #ffffff
-    top: 80%
-    left: 50%
+    margin: 0 auto $gap
     animation: animate 2s infinite
 
 .arrow:before
@@ -62,8 +60,8 @@
     display: flex
     width: 30%
     position: absolute
-    top: 35%
-    left: 5%
+    top: 48%
+    right: 5%
 
 .hero__captions
     flex: 1
@@ -96,17 +94,19 @@
 .hero__title
     display: flex
     flex-direction: column
+    justify-content: space-around
     text-align: center
     position: absolute
     top: 0
     // left: 32%
     // background: rgba(255,255,255,.8)
-    margin: 40px 0 40px
+    margin: 0 0 40px
     text-align: center
     height: 100vh
+    width: 100vw
     .logo
         display: block
-        margin-top: 40px
+        margin-top: $gap
         img
             width: 200px
     .socials
@@ -146,7 +146,7 @@
     display: flex
     justify-content: space-between
     align-items: center
-    margin: 0 auto 40px
+    margin: 0 auto $gap*2
     a.nav__link
         font-family: $ff-head
         font-weight: 700
@@ -171,13 +171,15 @@
     font-weight: 300
     letter-spacing: .85px
     color: #ffffff
-    margin-bottom: 40px
+    padding: $gap*2 0
     display: flex
     flex-direction: column
     justify-content: flex-end
     align-items: center
-    width: 100vw
+    width: 500px
     background: rgba(37, 28, 23, .6)
+    position: absolute
+    bottom: 0
     &__item
         margin-bottom: 15px
         color: $color--white
@@ -195,7 +197,6 @@
             margin: 0 0 10px
     &__phone
         margin-bottom: 10px
-
 
 .contact
     display: inline-block

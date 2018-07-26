@@ -3,21 +3,24 @@
         grid-template-columns: 100vw
         .hero__title
             width: 100vw
+            margin: 0 0 40px
             .logo
-                margin: 20px 0
+                margin: 20px auto
+                width: 115px
             .nav
                 margin: 0px auto
+                flex-direction: column
             .contacts__address
                 padding: 0px 5px
         .hero__captions
             display: none
         .contacts
+            display: none
             &__address
                 flex-direction: column
 
     .product__items
-        .product__item--odd,
-        .product__item--even
+        .product__item
             flex-direction: column
             padding: 20px 0
             h4.product__item--title
