@@ -1,8 +1,6 @@
 @media (max-width: 360px)
     .top
         grid-template-columns: 100vw
-        .hero
-            display: none
         .hero__title
             width: 100vw
             .logo
@@ -11,6 +9,8 @@
                 margin: 0px auto
             .contacts__address
                 padding: 0px 5px
+        .hero__captions
+            display: none
 
     .product__items
         .product__item--odd,
@@ -41,10 +41,11 @@
         grid-template-columns: 100vw
         .hero__title
             width: 100vw
+            left: 0
             .contacts__address
                 span
                     padding: 0 5px
-        .hero
+        .hero__captions
             display: none
 
     .product
