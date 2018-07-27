@@ -3,21 +3,28 @@
         grid-template-columns: 100vw
         .hero__title
             width: 100vw
+            margin: 0
             .logo
-                margin: 20px 0
+                margin: $gap*2 auto 0
+                width: 115px
             .nav
                 margin: 0px auto
+                flex-direction: column
+                a.nav__link
+                    width: 100%
+                    &:first-child
+                        margin-left: 20px
             .contacts__address
                 padding: 0px 5px
         .hero__captions
             display: none
         .contacts
+            display: none
             &__address
                 flex-direction: column
 
     .product__items
-        .product__item--odd,
-        .product__item--even
+        .product__item
             flex-direction: column
             padding: 20px 0
             h4.product__item--title
@@ -38,6 +45,31 @@
                 &-text
                     padding: 0 30px
                     text-align: left
+
+    section
+        padding: 25px 0
+        h2
+            margin: 0 0 25px
+
+    section.video
+        .video__present
+            width: auto
+
+    .certificate
+        .certificate__items
+            .certificate__item
+                width: 100%
+                height: auto
+
+    footer.footer
+        padding: 50px 0 35px
+        .footer__contacts
+            display: flex
+            flex-direction: column
+            justify-content: center
+            align-items: center
+            padding: 0 20px
+            text-align: center
 
 @media (max-width: 720px)
     .top

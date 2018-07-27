@@ -1,19 +1,20 @@
 .footer
     background: #000000
     padding: 100px 0 80px
-    color: #ffffff
-    .contacts
+    .footer__contacts
         margin-bottom: 0
         width: 100%
-        &__item
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        .footer__item
             margin-bottom: 20px
             letter-spacing: 1px
-            a 
+            a
                 text-decoration: none
-            span    
-                color: #ffffff
-        &__phones
-            display: inline-block
-            margin: 0 0 0 50px
-            span 
-                margin-left: 8px
+                color: $color--white
+            span
+                color: $color--white
+            .footer__phones
+                margin-bottom: $gap

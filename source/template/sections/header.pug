@@ -13,8 +13,6 @@ header.top#top
                 .hero__captions--caption This is a caption for slide 4
         .pagination
 
-        //- a#arrow-down.arrow-down.scroll(href="#product" data-scroll) 
-        
         .hero__title#hero-title
             a.logo: img.logo__picture(src="images/asfour-logo-white.svg")
             nav.nav
@@ -22,6 +20,7 @@ header.top#top
                 a.nav__link(href="#product" data-scroll) Продукция
                 a.nav__link(href="#video" data-scroll) Видео
                 a.nav__link(href="#certificate" data-scroll) Сертификаты
+                a.nav__link(href="#map" data-scroll) Карта
                 a.nav__link(href="#contacts" data-scroll) Контакты
 
             .contacts
@@ -32,37 +31,28 @@ header.top#top
 
                 .contacts__item.contacts__phones
                     .contacts__phone.contacts__phone--phone
-                        //- i.fa.fa-phone
-                        //- i.fi.fi-phone
                         span 044 585-99-20
                     .contacts__phone.contacts__phone--fax
-                        //- i.fa.fa-fax
                         span 044 522-58-14
                     .contacts__phone.contacts__phone--mobile
-                        //- i.fa.fa-mobile
-                        //- i.fi.fi-mobile-alt
                         span 063 719-27-73
 
                 a.contacts__item.contacts__mail--item(href="mailto:asfour@asfour.com.ua")
-                        //- i.fa.fa-envelope-o
-                        //- i.fi.fi-email
                         span  asfour@asfour.com.ua
                 a.contacts__item.contacts__mail--item(href="mailto:crystal@asfour.com.ua")
-                        //- i.fa.fa-envelope-o
-                        //- i.fi.fi-email
                         span  crystal@asfour.com.ua
-            a.arrow(href="#product" data-scroll)
 
             .socials
                 .socials__item
-                    //- i.fa.fa-facebook-f
                     i.fi.fi-facebook
                 .socials__item
-                    //- i.fa.fa-youtube
-                    i.fi.fi-youtube-play
+                    a(href="https://youtu.be/NFNoRPJAuw8")
+                        i.fi.fi-youtube-play
+                        
                 .socials__item
-                    //- i.fa.fa-instagram
                     i.fi.fi-instagram
+
+            a.arrow(href="#product" data-scroll)
 
 
 
