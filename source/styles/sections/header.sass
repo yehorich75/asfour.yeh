@@ -86,7 +86,7 @@
     .socials
         display: flex
         font-size: 30px
-        color: #ffffff
+        color: $color--white
         justify-content: center
         align-items: center
         &__item
@@ -98,7 +98,7 @@
     width: 100vw
     height: 15vh
     z-index: 10
-    background: #ffffff
+    background: $color--white
     display: flex
     flex-direction: row
     .logo
@@ -114,7 +114,7 @@
         margin: auto
         a.nav__link
             padding: 0 20px
-            color: #ffffff
+            color: $color--white
 
 .nav
     display: flex
@@ -133,17 +133,19 @@
         text-transform: uppercase
         letter-spacing: 0.85px
         cursor: pointer
-        background: rgb(255, 255, 255)
+        background: $color--white
         &:hover
             color: $blue-color
         &__link--active
             color: #1565C0
+        &:first-child
+            margin-left: 0
 
 .contacts
     font-size: 1rem
     font-weight: 300
     letter-spacing: .85px
-    color: #ffffff
+    color: $color--white
     padding: $gap*2 0
     display: flex
     flex-direction: column
@@ -192,7 +194,7 @@
 .arrow
     height: 40px
     width: 2px
-    background: #ffffff
+    background: $color--white
     margin: 0 auto $gap
     animation: animate 2s infinite
 
@@ -203,8 +205,8 @@
     left: -9px
     width: 20px
     height: 20px
-    border-bottom: 2px solid #ffffff
-    border-right: 2px solid #ffffff
+    border-bottom: 2px solid $color--white
+    border-right: 2px solid $color--white
     transform: rotate(45deg)
 
 @keyframes animate
