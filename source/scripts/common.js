@@ -48,3 +48,9 @@ var options = { speed: 3000, easing: "easeOutCubic" };
 //     offset: 400,
 //     loop: true
 // });
+
+jQuery(document).ready(function($) {
+    $('.icon__menu').click(function(event) {
+        $('.nav').toggleClass('.nav__active');
+    });
+});

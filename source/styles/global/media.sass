@@ -5,22 +5,33 @@
             width: 100vw
             margin: 0
             .logo
-                margin: $gap*2 auto 0
-                width: 115px
+                display: none
+                // margin: $gap*2 auto 0
+                // width: 115px
+        .fixed
+            height: 12vh
             .nav
-                margin: 0px auto
-                flex-direction: column
-                a.nav__link
-                    margin-left: 0
-                    width: 100%
-            .contacts__address
-                padding: 0px 5px
-        .hero__captions
-            display: none
-        .contacts
-            display: none
-            &__address
-                flex-direction: column
+                position: fixed
+                top: -300px
+                width: 300px
+                height: 100%
+                transition: top 1s ease-out 0.5s
+            
+            .menu__icon
+                display: block
+                height: 30px
+                width: 30px
+                margin: auto
+                cursor: pointer
+                .divide
+                    display: block
+                    height: 2px
+                    margin: 5px 0
+                    background: $font-color
+        .hero__captions,
+        .contacts,
+        .socials
+            display: none       
 
     .product__items
         .product__item
