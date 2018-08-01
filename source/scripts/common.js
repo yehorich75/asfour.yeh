@@ -50,7 +50,7 @@ var options = { speed: 3000, easing: "easeOutCubic" };
 // });
 
 jQuery(document).ready(function($) {
-    $('.icon__menu').click(function(event) {
-        $('.nav').toggleClass('.nav__active');
+    $('.fixed .icon__menu').click(function(event) {
+        $('.fixed .nav').toggleClass('.fixed .nav__active');
     });
 });
