@@ -8,9 +8,16 @@
                 display: none
                 // margin: $gap*2 auto 0
                 // width: 115px
+            .nav
+                display: flex
+                flex-direction: column
+                &__link
+                    width: 100%
+                    margin-left: 0
         .fixed
             height: 12vh
             .nav
+                display: none
                 position: fixed
                 top: -300px
                 height: 100%
@@ -21,7 +28,7 @@
                 height: auto
                 .nav__link
                     width: 100%
-            
+
             .menu__icon
                 display: block
                 height: 30px
@@ -36,7 +43,7 @@
         .hero__captions,
         .contacts,
         .socials
-            display: none       
+            display: none
 
     .product__items
         .product__item
